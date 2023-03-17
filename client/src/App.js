@@ -11,13 +11,11 @@ const api="http://localhost:8080";
 
   const [ events, setEvents ] = useState(["hello", "goodbye"]);
   const [ categories, setCategories ] = useState(["cat", "dog"]);
+  const [ locations, setLocations ] = useState(["hamburger", "hotdog"]);
 
   //======ATTN TEAM, CLICK ON LOG STATES BUTTON TO console.log NEW STATES=====
   
-    // let locations = []; 
-    let categoriesArray = [];
-  
-  //on load get events
+  //on load, get events
   useEffect(() => {
       getEvents();
   }, []);
@@ -36,14 +34,22 @@ const api="http://localhost:8080";
         console.log('byCategory', byCategory)
         // console.log("categories", categories)
         // console.log("events: ", events)
+        return(eventsArray)
       })
+      // .then((eventsArray) => {
+      //   const byLocation = getLocations(eventsArray)
+      //   console.log("byLocation", byLocation)
+      //   setLocations(byLocation)
+      //   console.log('byLocation', byLocation)
+      // })
       .catch((err) => {
           console.log(err);
       })
   }
 
-
+//=====GET CATEGORIES FUNCTION=====
   function getCategories(array) {
+    let categoriesArray = [];
     array.forEach(event => {
       event.category.forEach(cat => {
         // changed categories to uppercase to deal with mismatched cases
@@ -56,22 +62,25 @@ const api="http://localhost:8080";
     return categoriesArray;
   }
 
+    // //======GET LOCATIONS FUNCTION====
+    // function getLocations(array) {
+    //   let locationsArray = [];
+    //   array.forEach(event => {
+    //     event.location.forEach(local => {
+    //     if (!locationsArray.includes(local.toUpperCase())){
+    //       locationsArray.push(local.toUpperCase());
+    //     }})
+    //   })
+    //   return locationsArray;
+    // }
+
 function logStates() {
     console.log('events', events);
     console.log('categories: ', categories)
+    console.log('locations: ', locations)
   }
 
-    //=====THIS WILL BE GET LOCATION FUNCTION SOON=====
-  // function getCategories(array) {
-  //   let categoriesArray = [];
-  //   array.forEach(event => {
-  //     event.category.forEach(cat => {
-  //     if (!categoriesArray.includes(cat)){
-  //       categoriesArray.push(cat);
-  //     }})
-  //     return categoriesArray;
-  //   })
-  // }
+
 
 
   return (
