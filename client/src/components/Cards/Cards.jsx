@@ -1,8 +1,12 @@
 import React from "react";
-import Card from "./OpportunityCard";
+import Card from "../Card/Card";
 import "./Cards.scss";
 
 const Cards = ({ cards }) => {
+  if (!cards || !Array.isArray(cards)) {
+    return <div>No results to display.</div>;
+  }
+
   return (
     <ul id="cards__list" className="cards__list">
       {cards.map((card) => {
