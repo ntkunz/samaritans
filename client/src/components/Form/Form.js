@@ -1,7 +1,7 @@
 import {v4 as uuid} from 'uuid';
 import {useState} from 'react';
 
-export default function FormKevin({events, categories, locations, displayEvents}) {
+export default function Form({events, categories, locations, displayEvents}) {
 
     function submitHandler(event){
       event.preventDefault();
@@ -38,14 +38,10 @@ export default function FormKevin({events, categories, locations, displayEvents}
       console.log("matchign events: ", matchingEvents);
 
       let searchQuery = `Categories: ${checkedCategories} | Locations: ${checkedLocations}`;
-      // Send back matching events to parent fxn, which will set matchingEvents state and trigger re-render that displays matching events on page
+
+      // Finally, send back matching events to parent fxn, which will set matchingEvents state and trigger re-render that displays matching events on page
       displayEvents(matchingEvents, searchQuery);
 
-      
-
-      // can use square brackets to target name attrib of the checkbox element
-      // this will be handy if we're using variables to get the name
-      //console.log(event.target["Wo, pa"].checked);
     }
   
     /* 
