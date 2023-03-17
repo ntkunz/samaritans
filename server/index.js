@@ -9,7 +9,10 @@ const eventsRoute = require('./routes/events');
 
 const dataLocation  = "./data/events.json";
 
+// set public folder for images
+app.use(express.static('public')); 
 app.use(cors());
+
 app.use("/events", eventsRoute);
 
 app.get("/", (req, res) => {
