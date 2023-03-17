@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+  background-color: rgb(226, 226, 226);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.header {
+
+  &__title {
+    background-color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 3.5rem;
+    color: rgb(41, 41, 41);
+  }
+
+  &__span {
+    color: #008b84;
+  }
+
+  &__subtitle {
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    background-color: #008b84;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+}

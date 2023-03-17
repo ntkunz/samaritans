@@ -6,7 +6,7 @@ export default function EventList({matchingEvents, searchQuery}){
 
     if (matchingEvents.length > 0) {
         return(
-            <div key={uuid()}>
+            <div className="event__outer-wrapper" key={uuid()}>
                 <p>{matchingEvents.length} Results</p>
                 <p>You searched for:</p>
                 <p>{searchQuery}</p>

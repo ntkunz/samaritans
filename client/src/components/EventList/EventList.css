@@ -1,0 +1,19 @@
+.event__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.event__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event__outer-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}/*# sourceMappingURL=EventList.css.map */
