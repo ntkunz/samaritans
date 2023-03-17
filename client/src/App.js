@@ -81,21 +81,30 @@ function App() {
     console.log("locations: ", locations);
   }
 
-  function displayEvents(chosenEvents, searchQuery){
+  function displayEvents(chosenEvents, searchQuery) {
     setMatchingEvents(chosenEvents);
     setSearchQuery(searchQuery);
   }
 
-  return (
-    <>
-      <header>
-      </header>
-      <body>
-        <p>{events.length}</p>
+  /*
+  // was in return before:
+          <p>{events.length}</p>
         <p>{events.length}</p>
         <p>{categories.length}</p>
         <button onClick={logStates}>log states</button>
-        <Form events={events} categories={categories} locations={locations} displayEvents={displayEvents} />
+  */
+  return (
+    <>
+      <body>
+        <header></header>
+        <h1>Do Some Good</h1>
+        <h2>Select from the choices below to find volunteering opportunities near you:</h2>
+        <Form
+          events={events}
+          categories={categories}
+          locations={locations}
+          displayEvents={displayEvents}
+        />
         <EventList matchingEvents={matchingEvents} searchQuery={searchQuery} />
       </body>
     </>

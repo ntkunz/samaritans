@@ -1,3 +1,4 @@
+import "./Event.scss";
 
 export default function Event({eventDetails}) {
 
