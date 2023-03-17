@@ -1,0 +1,110 @@
+.search {
+    margin: 0;
+    // padding: 1rem 2rem;
+
+    &__ribbon {
+        background-color: #00d1cd;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.25rem 2rem;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    &__title {
+        font-size: 1.125rem;
+        color: white;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    &__sub-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #444444;
+        margin: 0;
+    }
+
+    &__header {
+        font-size: 3.75rem;
+        font-weight: 600;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+        text-align: center;
+        margin: auto;
+        width: 60%;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin: auto;
+        justify-content: center;
+        padding-bottom: 2rem;
+    }
+
+    &__options {
+        width: 20rem;
+        height: 5rem;
+        border-radius: 9px;
+        font-size: 1.5rem;
+        color: white;
+        background-color: #444444;
+    }
+
+    &__options.selected {
+        background-color: #00d1cd;
+    }
+
+    &__dropdown {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        justify-content: space-between;
+    }
+    
+    &__radio {
+        padding-left: 2rem;
+    }
+
+    &__label {
+        display: inline-block;
+        margin: 1rem;
+        width: 12rem;
+        height: 1.8rem;
+        border-radius: 7px;
+        background-color: silver;
+        color: black;
+        font-size: 1.125rem;
+        font-weight: 600;
+        border: solid 1px #444444;
+    }
+
+    &__submit {
+        height: 2rem;
+        width: 10rem;
+        border-radius: 7px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        background-color: #00d1cd;
+        justify-self: center;
+        margin-top: 2rem;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0;
+        padding-left: 10rem;
+        padding-top: 2rem;
+    }
+
+}
