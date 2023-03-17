@@ -37,7 +37,7 @@
         border:none;
         outline: 1px solid rgb(224, 224, 224);
         border-radius: 4px;
-        width:32%;
+        width:100%;
         padding: 0.3rem;
         background-color: rgb(255, 255, 255);
         transition: outline .25s ease-in-out;
@@ -46,6 +46,13 @@
             outline: 4px solid #fcbbec;
         }
 
+        @media only screen and (min-width: 900px) {
+            width: 48%;
+            padding: 0;
+        }
+        @media only screen and (min-width: 1360px) {
+            width: 31%;
+        }
     }
 
     &__button {
