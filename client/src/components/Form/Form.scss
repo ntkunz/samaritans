@@ -58,7 +58,8 @@
     }
 
   &__button {
-    background: linear-gradient(to bottom right, #008b84, #cdfff9);
+    // background: linear-gradient(to bottom right, #008b84, #cdfff9);
+    background-color: #008b84;
     border: none;
     border-radius: 4px;
     color: white;
@@ -66,13 +67,15 @@
     font-size: 1.25rem;
     font-weight: 600;
     padding: 0.5rem 4rem;
-    margin-top: 1rem;
+    margin: 1rem 2rem 0;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
   }
 
   &__button:hover {
-    background: linear-gradient(to bottom right, #00ffff, #ff1493);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 2px 4px cyan;
-    transform: translateY(-3px);
+    // background: linear-gradient(to bottom right, #00ffff, #ff1493);
+    // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 2px 4px cyan;
+    // transform: translateY(-3px);
+    background-color: #d70f64;
   }
 }

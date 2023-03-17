@@ -2,6 +2,15 @@ import { v4 as uuid } from "uuid";
 import "./Form.scss";
 
 export default function Form({ events, categories, locations, displayEvents }) {
+  
+  function seeAllSubmit(e){
+    e.preventDefault();
+    let searchQuery = "Here are all open positions";
+    displayEvents(events, searchQuery);
+    return;
+  }
+  
+  
   function submitHandler(event) {
     event.preventDefault();
 
@@ -111,6 +120,7 @@ export default function Form({ events, categories, locations, displayEvents }) {
           })}
         </div>
         <button className="eventform__button">Submit</button>
+        <button onClick={seeAllSubmit} className="eventform__button">View All</button>
       </form>
     </div>
   );
