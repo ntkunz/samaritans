@@ -1,0 +1,17 @@
+.eventform {
+  width: 50%;
+  margin: 0 auto;
+}
+.eventform__checkgroup {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+}
+.eventform__checkbox {
+  border: none;
+  outline: 1px solid grey;
+  border-radius: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.3rem;
+}/*# sourceMappingURL=Form.css.map */

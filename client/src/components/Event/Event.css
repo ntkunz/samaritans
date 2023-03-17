@@ -1,0 +1,11 @@
+.card {
+  width: 23%;
+  padding: 1rem;
+}
+.card__image {
+  width: 16rem;
+  height: 9rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}/*# sourceMappingURL=Event.css.map */

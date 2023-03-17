@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 // import KevinTest from "./components/formkevintest";
 import Form from "./components/Form/Form";
 import EventList from "./components/EventList/EventList";
@@ -69,16 +69,9 @@ function App() {
       // changed locations to uppercase to deal with mismatched cases
       if (!locationsArray.includes(event.location.toUpperCase())) {
         locationsArray.push(event.location.toUpperCase());
-        // console.log('location array : ', locationsArray)
       }
     });
     return locationsArray;
-  }
-
-  function logStates() {
-    console.log("events", events);
-    console.log("categories: ", categories);
-    console.log("locations: ", locations);
   }
 
   function displayEvents(chosenEvents, searchQuery) {
@@ -86,18 +79,12 @@ function App() {
     setSearchQuery(searchQuery);
   }
 
-  /*
-  // was in return before:
-          <p>{events.length}</p>
-        <p>{events.length}</p>
-        <p>{categories.length}</p>
-        <button onClick={logStates}>log states</button>
-  */
   return (
-      <>
-        <header></header>
-        <h1>Do Some Good</h1>
-        <h2>Select from the choices below to find volunteering opportunities near you:</h2>
+      <main className="main">
+        <header className="header">
+          <h1 className="header__title">Do Some Good</h1>
+          <h2 className="header__subtitle">Select from the choices below to find volunteering opportunities near you:</h2>
+        </header>
         <Form
           events={events}
           categories={categories}
@@ -105,7 +92,7 @@ function App() {
           displayEvents={displayEvents}
           />
         <EventList matchingEvents={matchingEvents} searchQuery={searchQuery} />
-      </>
+      </main>
 
   );
 }
