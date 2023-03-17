@@ -31,13 +31,10 @@ const api="http://localhost:8080";
       .then((eventsArray) => {
         const byCategory = getCategories(eventsArray)
         setCategories(byCategory)
-        console.log('byCategory', byCategory)
-        return(eventsArray)
-      })
-      .then((eventsArray) => {
-        console.log(eventsArray)
+        // console.log('byCategory', byCategory)
         const byLocation = getLocations(eventsArray)
         setLocations(byLocation)
+        // console.log('byLocation', byLocation)
       })
       .catch((err) => {
           console.log(err);
@@ -52,7 +49,7 @@ const api="http://localhost:8080";
         // changed categories to uppercase to deal with mismatched cases
         if (!categoriesArray.includes(cat.toUpperCase())) {
           categoriesArray.push(cat.toUpperCase())
-          console.log('cat array: ', categoriesArray)
+          // console.log('cat array: ', categoriesArray)
         }
       })
     })
@@ -66,7 +63,7 @@ const api="http://localhost:8080";
         // changed locations to uppercase to deal with mismatched cases
         if (!locationsArray.includes(event.location.toUpperCase())) {
           locationsArray.push(event.location.toUpperCase())
-          console.log('location array : ', locationsArray)
+          // console.log('location array : ', locationsArray)
         }
       })
     return locationsArray;
