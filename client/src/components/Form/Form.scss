@@ -11,41 +11,51 @@
     font-size: 1.5rem;
   }
 
-  &__section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: space-between;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
-  }
-
-  &__input {
-    width: 2rem;
-  }
-
-  &__checkgroup {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 2rem;
-    justify-content: space-between;
-    padding: 0.77rem;
-    font-weight: 500;
-  }
-  &__checkbox {
-    border: none;
-    outline: 1px solid rgb(224, 224, 224);
-    border-radius: 4px;
-    width: 32%;
-    padding: 0.3rem;
-    background-color: rgb(255, 255, 255);
-    transition: outline 0.25s ease-in-out;
-
-    &:hover {
-      outline: 4px solid #fcbbec;
+    &__section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-between;
+        background-color: white;
+        opacity: 0.8;
+        padding: 1rem;
+        border-radius: 8px;
     }
-  }
+
+    &__input {
+        width: 2rem;
+    }
+    
+    &__checkgroup {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 2rem;
+        justify-content: space-between;
+        padding: .77rem;
+        font-weight: 500;
+    }
+    &__checkbox {
+        border:none;
+        outline: 1px solid rgb(224, 224, 224);
+        border-radius: 4px;
+        width:100%;
+        padding: 0.3rem;
+        background-color: rgb(255, 255, 255);
+        transition: outline .25s ease-in-out;
+        
+        
+        &:hover {
+            outline: 4px solid #fcbbec;
+        }
+
+        @media only screen and (min-width: 900px) {
+            width: 48%;
+            padding: 0;
+        }
+        @media only screen and (min-width: 1360px) {
+            width: 31%;
+        }
+    }
 
   &__button {
     background: linear-gradient(to bottom right, #008b84, #cdfff9);

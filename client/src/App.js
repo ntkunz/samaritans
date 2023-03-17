@@ -77,6 +77,9 @@ function App() {
   function displayEvents(chosenEvents, searchQuery) {
     setMatchingEvents(chosenEvents);
     setSearchQuery(searchQuery);
+    
+    let button = document.querySelector(".eventform__button");
+    button.scrollIntoView(true);
   }
 
   return (
@@ -85,13 +88,16 @@ function App() {
           <h1 className="header__title">Do Some <span className="header__span">Good</span></h1>
           <h2 className="header__subtitle">Select from the choices below to find volunteering opportunities near you:</h2>
         </header>
-        <Form
-          events={events}
-          categories={categories}
-          locations={locations}
-          displayEvents={displayEvents}
-          />
-        <EventList matchingEvents={matchingEvents} searchQuery={searchQuery} />
+        <div className="form__wrapper">
+          <Form
+            events={events}
+            categories={categories}
+            locations={locations}
+            displayEvents={displayEvents}
+            />
+          </div>
+          <EventList matchingEvents={matchingEvents} searchQuery={searchQuery} />
+
       </main>
 
   );
