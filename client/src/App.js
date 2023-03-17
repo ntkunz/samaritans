@@ -32,16 +32,13 @@ const api="http://localhost:8080";
         const byCategory = getCategories(eventsArray)
         setCategories(byCategory)
         console.log('byCategory', byCategory)
-        // console.log("categories", categories)
-        // console.log("events: ", events)
         return(eventsArray)
       })
-      // .then((eventsArray) => {
-      //   const byLocation = getLocations(eventsArray)
-      //   console.log("byLocation", byLocation)
-      //   setLocations(byLocation)
-      //   console.log('byLocation', byLocation)
-      // })
+      .then((eventsArray) => {
+        console.log(eventsArray)
+        const byLocation = getLocations(eventsArray)
+        setLocations(byLocation)
+      })
       .catch((err) => {
           console.log(err);
       })
@@ -62,26 +59,24 @@ const api="http://localhost:8080";
     return categoriesArray;
   }
 
-    // //======GET LOCATIONS FUNCTION====
-    // function getLocations(array) {
-    //   let locationsArray = [];
-    //   array.forEach(event => {
-    //     event.location.forEach(local => {
-    //     if (!locationsArray.includes(local.toUpperCase())){
-    //       locationsArray.push(local.toUpperCase());
-    //     }})
-    //   })
-    //   return locationsArray;
-    // }
+  //=====GET LOCATIONS FUNCTION=====
+  function getLocations(array) {
+    let locationsArray = [];
+      array.forEach(event => {
+        // changed locations to uppercase to deal with mismatched cases
+        if (!locationsArray.includes(event.location.toUpperCase())) {
+          locationsArray.push(event.location.toUpperCase())
+          console.log('location array : ', locationsArray)
+        }
+      })
+    return locationsArray;
+  }
 
 function logStates() {
     console.log('events', events);
     console.log('categories: ', categories)
     console.log('locations: ', locations)
   }
-
-
-
 
   return (
     <div className="App">
