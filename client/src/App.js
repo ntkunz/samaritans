@@ -77,6 +77,9 @@ function App() {
   function displayEvents(chosenEvents, searchQuery) {
     setMatchingEvents(chosenEvents);
     setSearchQuery(searchQuery);
+    
+    let button = document.querySelector(".eventform__button");
+    button.scrollIntoView(true);
   }
 
   return (
