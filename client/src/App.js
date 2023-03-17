@@ -31,17 +31,11 @@ const api="http://localhost:8080";
       .then((eventsArray) => {
         const byCategory = getCategories(eventsArray)
         setCategories(byCategory)
-        console.log('byCategory', byCategory)
-        // console.log("categories", categories)
-        // console.log("events: ", events)
-        return(eventsArray)
+        // console.log('byCategory', byCategory)
+        const byLocation = getLocations(eventsArray)
+        setLocations(byLocation)
+        // console.log('byLocation', byLocation)
       })
-      // .then((eventsArray) => {
-      //   const byLocation = getLocations(eventsArray)
-      //   console.log("byLocation", byLocation)
-      //   setLocations(byLocation)
-      //   console.log('byLocation', byLocation)
-      // })
       .catch((err) => {
           console.log(err);
       })
@@ -55,33 +49,31 @@ const api="http://localhost:8080";
         // changed categories to uppercase to deal with mismatched cases
         if (!categoriesArray.includes(cat.toUpperCase())) {
           categoriesArray.push(cat.toUpperCase())
-          console.log('cat array: ', categoriesArray)
+          // console.log('cat array: ', categoriesArray)
         }
       })
     })
     return categoriesArray;
   }
 
-    // //======GET LOCATIONS FUNCTION====
-    // function getLocations(array) {
-    //   let locationsArray = [];
-    //   array.forEach(event => {
-    //     event.location.forEach(local => {
-    //     if (!locationsArray.includes(local.toUpperCase())){
-    //       locationsArray.push(local.toUpperCase());
-    //     }})
-    //   })
-    //   return locationsArray;
-    // }
+  //=====GET LOCATIONS FUNCTION=====
+  function getLocations(array) {
+    let locationsArray = [];
+      array.forEach(event => {
+        // changed locations to uppercase to deal with mismatched cases
+        if (!locationsArray.includes(event.location.toUpperCase())) {
+          locationsArray.push(event.location.toUpperCase())
+          // console.log('location array : ', locationsArray)
+        }
+      })
+    return locationsArray;
+  }
 
 function logStates() {
     console.log('events', events);
     console.log('categories: ', categories)
     console.log('locations: ', locations)
   }
-
-
-
 
   return (
     <div className="App">
