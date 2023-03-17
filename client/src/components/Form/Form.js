@@ -20,8 +20,8 @@ export default function Form({ events, categories, locations, displayEvents }) {
     );
     console.log("checked lcoations: ", checkedLocations);
 
+    // If user selected neither cats nor locs, then stop them and cancel out.
     if (checkedCategories.length === 0 && checkedLocations.length === 0) {
-      // cannot proceed if no cats or locs are selected
       alert("Must choose at least 1 category or 1 location!");
       return;
     }
@@ -45,28 +45,25 @@ export default function Form({ events, categories, locations, displayEvents }) {
       // If there were no locations selected, then just return events matching category. Earlier checks make it impossible to get here with neither locs nor cats
       matchingEvents = matchingCatEvents;
     } else if (checkedLocations.length > 0 && matchingCatEvents.length == 0) {
-      // If locations were select, but no categories
+      // If locations were selected, but no categories
       matchingEvents = events.filter((event) => {
         return checkedLocations.includes(event.location.toUpperCase());
       });
     } else {
-      // If both cat and loc were selected
+      // If both cats and locs were selected
       matchingEvents = matchingCatEvents.filter((event) => {
         return checkedLocations.includes(event.location.toUpperCase());
       });
     }
-    console.log("matchign category events: ", matchingCatEvents);
-    console.log("matchign events: ", matchingEvents);
+    // console.log("matchign category events: ", matchingCatEvents);
+    // console.log("matchign events: ", matchingEvents);
 
+    // This will be used to display what was selected for this search
     let searchQuery = `Categories: ${checkedCategories} | Locations: ${checkedLocations}`;
 
     // Finally, send back matching events to parent fxn, which will set matchingEvents state and trigger re-render that displays matching events on page
     displayEvents(matchingEvents, searchQuery);
   }
-
-  /*
-   * Form component uses cat and loc arrays to map out inputs
-   */
 
   return (
     <div className="App">
@@ -77,7 +74,6 @@ export default function Form({ events, categories, locations, displayEvents }) {
             let elemLower = elem.toLowerCase();
             return (
               <div key={uuid()} className="eventform__checkbox">
-                {/* <label  htmlFor={elem}>{elem.replace("_"," ")}</label> */}
                 <input
                   key={uuid()}
                   className="eventform__input"
