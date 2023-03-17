@@ -74,36 +74,37 @@ export default function Form({ events, categories, locations, displayEvents }) {
             let elemLower = elem.toLowerCase();
             return (
               <div key={uuid()} className="eventform__checkbox">
-                <label className="eventform__checkgroup" htmlFor={elemLower}>{elem}
-                <input
-                  key={uuid()}
-                  className="eventform__input"
-                  type="checkbox"
-                  name={elemLower}
-                  value={elemLower}
-                  id={elemLower}
-                ></input>
+                <label className="eventform__checkgroup" htmlFor={elemLower}>
+                  {elem}
+                  <input
+                    key={uuid()}
+                    className="eventform__input"
+                    type="checkbox"
+                    name={elemLower}
+                    value={elemLower}
+                    id={elemLower}
+                  ></input>
                 </label>
               </div>
             );
           })}
-          </div>
+        </div>
         <h2 className="eventform__title">I'm located in:</h2>
         <div className="eventform__section">
-          
           {locations.map((elem) => {
             let elemLower = elem.toLowerCase();
             return (
               <div key={uuid()} className="eventform__checkbox">
-                <label className="eventform__checkgroup" htmlFor={elemLower}>{elem}
-                <input
-                  key={uuid()}
-                  className="eventform__input"
-                  type="checkbox"
-                  name={elemLower}
-                  value={elemLower}
-                  id={elemLower}
-                ></input>
+                <label className="eventform__checkgroup" htmlFor={elemLower}>
+                  {elem}
+                  <input
+                    key={uuid()}
+                    className="eventform__input"
+                    type="checkbox"
+                    name={elemLower}
+                    value={elemLower}
+                    id={elemLower}
+                  ></input>
                 </label>
               </div>
             );

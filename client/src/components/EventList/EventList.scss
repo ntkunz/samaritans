@@ -1,38 +1,8 @@
 .event__wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-.event__wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .event__outer-wrapper {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.event__ribbon {
-  background-color: #008b84;
-  padding: 1rem 0;
-}
-
-.event__text {
-  color: white;
-  text-align: center;
-  font-size: 1.5rem;
-  margin: 0.25rem 0;
-}
-
-.event__text--special {
-  font-weight: 600;
-}
-
-.event__text--small {
-  font-size: 1.125rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
