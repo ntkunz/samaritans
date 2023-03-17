@@ -9,6 +9,7 @@ const eventsRoute = require('./routes/events');
 
 const dataLocation  = "./data/events.json";
 
+app.use(cors());
 app.use("/events", eventsRoute);
 
 app.get("/", (req, res) => {
