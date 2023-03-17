@@ -1,17 +1,68 @@
 .eventform {
-    width: 50%;
-    margin: 0 auto;
+  width: 75%;
+  margin: 0 auto;
+  padding: 0.5rem 2rem 2rem;
+  color: rgb(41, 41, 41);
 
-    &__checkgroup {
-        display: flex;
-        flex-flow: row wrap;
-        gap: 0.5rem;
+  &__title {
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  &__section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  &__input {
+    width: 2rem;
+  }
+
+  &__checkgroup {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 0.77rem;
+    font-weight: 500;
+  }
+  &__checkbox {
+    border: none;
+    outline: 1px solid rgb(224, 224, 224);
+    border-radius: 4px;
+    width: 32%;
+    padding: 0.3rem;
+    background-color: rgb(255, 255, 255);
+    transition: outline 0.25s ease-in-out;
+
+    &:hover {
+      outline: 4px solid #fcbbec;
     }
-    &__checkbox {
-        border:none;
-        outline: 1px solid grey;
-        border-radius: 4px;
-        width:fit-content;
-        padding: 0.3rem;
-    }
+  }
+
+  &__button {
+    background: linear-gradient(to bottom right, #008b84, #cdfff9);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 0.5rem 4rem;
+    margin-top: 1rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  &__button:hover {
+    background: linear-gradient(to bottom right, #00ffff, #ff1493);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 2px 4px cyan;
+    transform: translateY(-3px);
+  }
 }
