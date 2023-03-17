@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import KevinTest from './components/formkevintest';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 //=========TO GET THE SERVER TO WORK WITH AXIOS, YOU MAY NEED TO ADD 
 //=========APP.USE(CORS()); TO YOUR MIDDLEWARE, AND NPM INSTALL CORS?
 function App() {
+
 
 const api="http://localhost:8080";
 
@@ -83,8 +84,14 @@ function logStates() {
           <p>{categories.length}</p>
           <button onClick={logStates}>log states</button>
       </header>
+      <body>
+        <KevinTest />
+      </body>
     </div>
   );
+
+  
 }
 
+ 
 export default App;
