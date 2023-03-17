@@ -1,0 +1,40 @@
+.header {
+    background-color: #444444;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__logo {
+        width: 20rem;
+        height: 2.5rem;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        // width: 40%;
+    }
+
+    &__sub-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text {
+        margin: 0;
+        font-size: 1.125rem;
+        color: white;
+    }
+
+    &__text--bold {
+        font-weight: 700;
+    }
+
+    &__sub-text {
+        font-size: 0.75rem;
+        margin: 0;
+        color: #00d1cd;
+    }
+}
