@@ -10,7 +10,7 @@ export default function EventList({matchingEvents, searchQuery}){
                 <p>{matchingEvents.length} Results</p>
                 <p>You searched for:</p>
                 <p>{searchQuery}</p>
-                <div class="event__wrapper">
+                <div className="event__wrapper">
                     {matchingEvents.map(event => {
                         return (
                             <Event eventDetails={event} />

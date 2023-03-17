@@ -94,8 +94,7 @@ function App() {
         <button onClick={logStates}>log states</button>
   */
   return (
-    <>
-      <body>
+      <>
         <header></header>
         <h1>Do Some Good</h1>
         <h2>Select from the choices below to find volunteering opportunities near you:</h2>
@@ -104,10 +103,10 @@ function App() {
           categories={categories}
           locations={locations}
           displayEvents={displayEvents}
-        />
+          />
         <EventList matchingEvents={matchingEvents} searchQuery={searchQuery} />
-      </body>
-    </>
+      </>
+
   );
 }
 

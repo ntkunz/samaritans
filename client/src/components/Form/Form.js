@@ -93,7 +93,6 @@ export default function Form({ events, categories, locations, displayEvents }) {
             let elemLower = elem.toLowerCase();
             return (
               <div key={uuid()} className="eventform__checkbox">
-                <label htmlFor={elemLower}>{elem}</label>
                 <input
                   key={uuid()}
                   className="eventform__input"
@@ -102,6 +101,7 @@ export default function Form({ events, categories, locations, displayEvents }) {
                   value={elemLower}
                   id={elemLower}
                 ></input>
+                <label htmlFor={elemLower}>{elem}</label>
               </div>
             );
           })}
