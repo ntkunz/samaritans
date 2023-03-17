@@ -68,12 +68,13 @@ export default function Form({ events, categories, locations, displayEvents }) {
   return (
     <div className="App">
       <form className="eventform" onSubmit={submitHandler}>
-        <h2>Categories:</h2>
-        <div className="eventform__checkgroup">
+        <h2 className="eventform__title">I'm interested in:</h2>
+        <div className="eventform__section">
           {categories.map((elem) => {
             let elemLower = elem.toLowerCase();
             return (
               <div key={uuid()} className="eventform__checkbox">
+                <label className="eventform__checkgroup" htmlFor={elemLower}>{elem}
                 <input
                   key={uuid()}
                   className="eventform__input"
@@ -82,17 +83,19 @@ export default function Form({ events, categories, locations, displayEvents }) {
                   value={elemLower}
                   id={elemLower}
                 ></input>
-                <label htmlFor={elemLower}>{elem}</label>
+                </label>
               </div>
             );
           })}
-        </div>
-        <h2>Locations:</h2>
-        <div className="eventform__checkgroup">
+          </div>
+        <h2 className="eventform__title">I'm located in:</h2>
+        <div className="eventform__section">
+          
           {locations.map((elem) => {
             let elemLower = elem.toLowerCase();
             return (
               <div key={uuid()} className="eventform__checkbox">
+                <label className="eventform__checkgroup" htmlFor={elemLower}>{elem}
                 <input
                   key={uuid()}
                   className="eventform__input"
@@ -101,12 +104,12 @@ export default function Form({ events, categories, locations, displayEvents }) {
                   value={elemLower}
                   id={elemLower}
                 ></input>
-                <label htmlFor={elemLower}>{elem}</label>
+                </label>
               </div>
             );
           })}
         </div>
-        <button>Submit</button>
+        <button className="eventform__button">Submit</button>
       </form>
     </div>
   );

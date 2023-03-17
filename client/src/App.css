@@ -15,16 +15,20 @@
 }
 
 .header__title {
-  background-color: whitegray;
+  background-color: white;
   text-align: center;
   padding: 1.5rem;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
+  color: rgb(41, 41, 41);
+}
+.header__span {
+  color: #008b84;
 }
 .header__subtitle {
   padding: 1rem;
   color: white;
   text-align: center;
   background-color: #008b84;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }/*# sourceMappingURL=App.css.map */

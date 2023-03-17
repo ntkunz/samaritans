@@ -82,7 +82,7 @@ function App() {
   return (
       <main className="main">
         <header className="header">
-          <h1 className="header__title">Do Some Good</h1>
+          <h1 className="header__title">Do Some <span className="header__span">Good</span></h1>
           <h2 className="header__subtitle">Select from the choices below to find volunteering opportunities near you:</h2>
         </header>
         <Form
